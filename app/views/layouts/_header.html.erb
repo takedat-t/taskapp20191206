@@ -5,17 +5,20 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "トップ", root_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
+          <li><%= link_to "タスク作成", '#' %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle header-list" data-toggle="dropdown" id=dropdown-title>
               <%= current_user.name %><b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Show", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
+              <li class="dropdown-header">ユーザー</li>
+              <li><a href="/users/3">プロフィール</a></li>
+              <li><a href="/users/3/edit">設定</a></li>
+              <li class="dropdown-header">タスク</li>
+              <li><a href="/users/3/tasks">タスク一覧</a></li>
               <li class="divider"></li>
-              <li><%= link_to "Log out", logout_path, method: :delete %></li>
-            </ul>
+              <li><a rel="nofollow" data-method="delete" href="/logout">ログアウト</a></li>
+            </ul
           </li>
         <% else %>
           <li><%= link_to "ログイン", login_path %></li>
