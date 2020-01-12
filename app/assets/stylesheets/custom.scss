@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
 /* 共通 */
 
 body {
@@ -30,10 +32,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-style: italic;
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
 h2 {
@@ -50,23 +54,71 @@ p {
   line-height: 1.7em;
 }
 
+/* ヘッダー 以下(bg-info)だとNG!機能しない！*/ 
+/*.navbar {
+  background-color: bg-info ;
+}*/
+
 /* ヘッダー */
+.navbar {
+  background-color: #0000FF ;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  background-color: #0000FF ;
+  font-weight: bolder;
+  color: #fff;
+}
+ 
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #0000FF ;
+  color: silver;
+}
+
 
 #logo {
+  font-style: italic;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
+/*capitalize
+単語の先頭文字を大文字にする*/
 
 #logo:hover {
-  color: #fff;
+  color: silver;
   text-decoration: none;
 }
+
+#dropdown-title {
+    background-color: #00F;
+}
+
+.header-list {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.header-list:hover {
+    color: silver !important;
+}
+
+#top-main {
+    background-color: rgba(255,255,255,0);
+}
+
+#top-main-title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
 
 /* デバッグウインドウ */
 
